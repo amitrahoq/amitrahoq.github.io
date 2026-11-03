@@ -7,7 +7,7 @@ navbar:
       href: resume.html
   right:
     - icon: fa-envelope fa-lg
-      href: mailto:<anh2179@cumc.columbia.edy>
+      href: mailto:<anh2179@cumc.columbia.edu>
     - icon: fa-github fa-lg
       href: https://github.com/amitrahoq
     - icon: fa-linkedin fa-lg
