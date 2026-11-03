@@ -1,0 +1,32 @@
+---
+title: "resume.Rmd"
+---
+
+
+## Education
+
+**Columbia University Mailman School of Public Health**, New York, New York
+MS Environmental Health Data Science | 2026-Present
+
+**New York University**, New York, New York
+BS Global Public Health and Biology | 2022-2025
+
+## Research Experience
+
+**Gradute Research Assistant**, Kupsco Lab on Environmental Epigenetics and Children's Health | 2026-present
+
+**Assisstant Research Director**, Equitable Environments for Health and Well-being | 2024-2026
+
+
+
+## Professional Experience
+
+**Consultant**, UNDP | 2026-present
+
+**Program Support Intern**, Healthright | 2023-2024
+
+
+## Skills
+
+* **Programming:** R, Python
+* **Tools:** Git/GitHub, R Markdown
