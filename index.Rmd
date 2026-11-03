@@ -2,7 +2,7 @@
 title: "index.Rmd"
 ---
 
-Hi! I'm a MS student in Environmental Health Sciences at Columbia University Mailman School of Public Health, interested in environmental epigenetics and epidemology. 
+Hi! I'm a MS student in Environmental Health Sciences at Columbia University Mailman School of Public Health, interested in environmental epigenetics and epidemiology. 
 
 On this site you can find my [resume](resume.html), with my academic and
 professional experience.
