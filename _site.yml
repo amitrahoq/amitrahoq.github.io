@@ -18,5 +18,5 @@ navbar:
       href: https://linkedin.com/in/amitra-hoq-a2166317b
 output:
   html_document:
-    theme: lightcyan
+    theme: darkly
     
