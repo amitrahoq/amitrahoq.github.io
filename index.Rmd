@@ -2,7 +2,7 @@
 title: "Index"
 ---
 
-Hi! I'm a MS student in Environmental Health Sciences at Columbia University Mailman School of Public Health, interested in environmental epigenetics and epidemiology. 
+Hi! My name is Amitra Hoq. I'm a MS student in Environmental Health Sciences at Columbia University Mailman School of Public Health, interested in environmental epigenetics and epidemiology especially in children. 
 
 On this site you can find my [resume](resume.html), with my academic and
 professional experience.
