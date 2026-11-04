@@ -2,7 +2,7 @@
 title: "Resume(abriged)"
 ---
 
-##[View My Full CV Here!](Amitra_Hoq_CV.pdf)
+[View My Full CV Here!](Amitra_Hoq_CV.pdf)
 
 
 ### Education
