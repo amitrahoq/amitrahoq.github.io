@@ -1,10 +1,11 @@
 ---
-title: "Resume"
+title: "Resume(abriged)"
 ---
 
+##[View My Full CV Here!](Amitra_Hoq_CV.pdf)
 
 
-## Education
+### Education
 
 **Columbia University Mailman School of Public Health**, New York, New York
 MS Environmental Health Data Science | 2026-Present
@@ -12,7 +13,7 @@ MS Environmental Health Data Science | 2026-Present
 **New York University**, New York, New York
 BS Global Public Health and Biology | 2022-2025
 
-## Research Experience
+### Research Experience
 
 **Graduate Research Assistant**, Kupsco Lab on Environmental Epigenetics and Children's Health | 2026-present
 
@@ -20,16 +21,15 @@ BS Global Public Health and Biology | 2022-2025
 
 
 
-## Professional Experience
+### Professional Experience
 
 **Consultant**, UNDP | 2026-present
 
 **Program Support Intern**, HealthRight | 2023-2024
 
 
-## Skills
+### Skills
 
 * **Programming:** R, Python
 * **Tools:** Git/GitHub, R Markdown
 
-[View My CV](Amitra_Hoq_CV.pdf)
