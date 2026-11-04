@@ -1,5 +1,5 @@
 ---
-title: "resume.Rmd"
+title: "Resume"
 ---
 
 
@@ -32,4 +32,4 @@ BS Global Public Health and Biology | 2022-2025
 * **Programming:** R, Python
 * **Tools:** Git/GitHub, R Markdown
 
-[View My CV](files/Amitra_Hoq_Cv.pdf)
+[View My CV](Amitra_Hoq_CV.pdf)

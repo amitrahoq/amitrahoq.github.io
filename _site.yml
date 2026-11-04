@@ -13,7 +13,7 @@ navbar:
     - icon: fa-github fa-lg
       href: https://github.com/amitrahoq
     - icon: fa-linkedin fa-lg
-      href: www.linkedin.com/in/amitra-hoq-a2166317b
+      href: https://linkedin.com/in/amitra-hoq-a2166317b
 output:
   html_document:
     theme: cerulean

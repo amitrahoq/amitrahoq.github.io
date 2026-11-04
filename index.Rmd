@@ -1,5 +1,5 @@
 ---
-title: "index.Rmd"
+title: "Index"
 ---
 
 Hi! I'm a MS student in Environmental Health Sciences at Columbia University Mailman School of Public Health, interested in environmental epigenetics and epidemiology. 
