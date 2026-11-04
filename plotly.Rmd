@@ -43,7 +43,7 @@ instacart_sample =
 ### Scatterplot
 
 Instacart has no two continuous variables measured on the same row, so a
-scatterplot needs an aggregation step first. Summarising to one row per aisle
+scatterplot needs an aggregation step first. Summarizing to one row per aisle
 gives us order volume and reorder rate as a pair, and we keep aisles with more
 than 1,000 items. Volume spans several orders of magnitude, so the x-axis is
 log-scaled, and `text` with `hoverinfo = "text"` replaces the default hover
