@@ -3,6 +3,7 @@ title: "resume.Rmd"
 ---
 
 
+
 ## Education
 
 **Columbia University Mailman School of Public Health**, New York, New York
@@ -23,10 +24,12 @@ BS Global Public Health and Biology | 2022-2025
 
 **Consultant**, UNDP | 2026-present
 
-**Program Support Intern**, Healthright | 2023-2024
+**Program Support Intern**, HealthRight | 2023-2024
 
 
 ## Skills
 
 * **Programming:** R, Python
 * **Tools:** Git/GitHub, R Markdown
+
+[View My CV](files/Amitra_Hoq_Cv.pdf)

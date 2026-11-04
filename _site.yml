@@ -5,6 +5,8 @@ navbar:
   left:
     - text: "Resume"
       href: resume.html
+    - text: "Dashboard"
+      href: dashboard.html
   right:
     - icon: fa-envelope fa-lg
       href: mailto:<anh2179@cumc.columbia.edu>
