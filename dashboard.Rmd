@@ -34,8 +34,7 @@ instacart |>
   plot_ly(
     x = ~aisle, y = ~n,
     color = ~aisle,
-    type = "bar",
-    colors = "viridis") |>
+    type = "bar",) |>
   layout(
     xaxis = list(title = "Aisle"),
     yaxis = list(title = "Number of items ordered"),
@@ -57,8 +56,7 @@ instacart_sample |>
     x = ~department,
     y = ~days_since_prior_order,
     color = ~department,
-    type = "box",
-    colors = "viridis") |>
+    type = "box",) |>
   layout(
     xaxis = list(title = "Department"),
     yaxis = list(title = "Days since prior order"),
@@ -83,8 +81,7 @@ instacart |>
     y = ~n,
     color = ~order_dow,
     type = "scatter",
-    mode = "lines",
-    colors = "viridis") |>
+    mode = "lines") |>
   layout(
     xaxis = list(title = "Hour of day"),
     yaxis = list(title = "Number of items ordered"),

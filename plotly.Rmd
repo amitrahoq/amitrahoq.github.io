@@ -1,0 +1,157 @@
+---
+title: "Plotly"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: show
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  fig.width = 8,
+  fig.align = "center"
+)
+```
+
+## Data and libraries
+
+We use the `instacart` data from `p8105.datasets`, along with `tidyverse` and
+`plotly`.
+
+```{r libraries}
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+
+data("instacart")
+```
+
+The full dataset has over 1.3 million rows. That is fine for plots that
+aggregate first, but slow for one that draws a point or a box per observation,
+so we also take a random sample of 50,000 rows. The seed makes that sample
+reproducible.
+
+```{r sample}
+set.seed(123)
+
+instacart_sample =
+  instacart |>
+  slice_sample(n = 50000)
+```
+
+## Plotly
+
+### Scatterplot
+
+Instacart has no two continuous variables measured on the same row, so a
+scatterplot needs an aggregation step first. Summarising to one row per aisle
+gives us order volume and reorder rate as a pair, and we keep aisles with more
+than 1,000 items. Volume spans several orders of magnitude, so the x-axis is
+log-scaled, and `text` with `hoverinfo = "text"` replaces the default hover
+box with a labelled one.
+
+```{r scatterplot}
+instacart |>
+  group_by(department, aisle) |>
+  summarize(
+    n_items = n(),
+    reorder_rate = mean(reordered),
+    .groups = "drop") |>
+  filter(n_items > 1000) |>
+  mutate(
+    text_label =
+      str_c("Aisle: ", aisle,
+            "\nDepartment: ", department,
+            "\nItems: ", n_items,
+            "\nReorder rate: ", round(reorder_rate, 3))) |>
+  plot_ly(
+    x = ~n_items,
+    y = ~reorder_rate,
+    color = ~department,
+    text = ~text_label,
+    hoverinfo = "text",
+    type = "scatter",
+    mode = "markers",
+    marker = list(size = 9, opacity = 0.7),
+    colors = "viridis") |>
+  layout(
+    xaxis = list(title = "Number of items ordered", type = "log"),
+    yaxis = list(title = "Proportion of items reordered"),
+    legend = list(title = list(text = "Department")))
+```
+
+### Histogram
+
+The distribution of days since the prior order, across all orders with a
+value. One bin per day gives 31 bins, and `bargap` adds a little space between
+them. Note the spike in the final bin: Instacart caps this variable at 30
+days, so that bar collects every longer gap as well.
+
+```{r histogram}
+instacart |>
+  filter(!is.na(days_since_prior_order)) |>
+  plot_ly(
+    x = ~days_since_prior_order,
+    type = "histogram",
+    nbinsx = 31,
+    marker = list(color = "#21908CFF")) |>
+  layout(
+    xaxis = list(title = "Days since prior order"),
+    yaxis = list(title = "Number of items ordered"),
+    bargap = 0.05)
+```
+
+### Boxplots
+
+Hour of day by department, using the 50,000-row sample. Departments are
+reordered by median hour with `fct_reorder`, which makes the ordering
+meaningful rather than alphabetical, and the legend is switched off because
+the x-axis already labels each box.
+
+```{r boxplots}
+instacart_sample |>
+  mutate(
+    department = fct_reorder(
+      department, order_hour_of_day)) |>
+  plot_ly(
+    x = ~department,
+    y = ~order_hour_of_day,
+    color = ~department,
+    type = "box",
+    colors = "viridis") |>
+  layout(
+    xaxis = list(title = "Department"),
+    yaxis = list(title = "Hour of day"),
+    showlegend = FALSE)
+```
+
+### ggplotly
+
+The same aisle-level scatterplot, built in `ggplot2` and then made interactive
+with `ggplotly()`. Hover text comes from the `text` aesthetic, which `ggplot2`
+ignores when drawing and `ggplotly()` picks up.
+
+```{r ggplotly}
+aisle_plot =
+  instacart |>
+  group_by(department, aisle) |>
+  summarize(
+    n_items = n(),
+    reorder_rate = mean(reordered),
+    .groups = "drop") |>
+  filter(n_items > 1000) |>
+  ggplot(aes(x = n_items, y = reorder_rate, color = department, text = aisle)) +
+  geom_point(alpha = 0.7) +
+  scale_x_log10() +
+  viridis::scale_color_viridis(discrete = TRUE) +
+  labs(
+    x = "Number of items ordered",
+    y = "Proportion of items reordered",
+    color = "Department")
+
+ggplotly(aisle_plot)
+```
